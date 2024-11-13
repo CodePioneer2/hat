@@ -12,15 +12,17 @@
         color: #00ff00; /* Neon green text */
         font-family: 'Courier New', Courier, monospace; /* Retro font */
         text-align: center;
-        font-size: 2em;
+        font-size: 1.5em; /* Reduced for mobile compatibility */
+        margin: 0;
+        padding: 0;
       }
 
       /* Headline */
       h1 {
         color: #ff00ff;
-        font-size: 4em;
+        font-size: 3em; /* Smaller font size for mobile */
         text-shadow: 2px 2px #00ff00;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
 
       /* Ordered list with glowing links */
@@ -28,7 +30,7 @@
         list-style-type: none;
         padding: 0;
         margin: 20px auto;
-        max-width: 500px;
+        max-width: 90%; /* Full width for smaller screens */
       }
 
       ol li {
@@ -49,11 +51,11 @@
 
       /* Retro-style images */
       img {
-        margin: 15px auto;
+        margin: 10px auto;
         border-radius: 10px;
         border: 2px solid #ffcc00;
-        width: 80%;
-        max-width: 400px;
+        width: 90%; /* Make images responsive */
+        max-width: 300px; /* Limit maximum width */
       }
 
       /* Blinking animation for the slogan */
@@ -61,6 +63,7 @@
         animation: blink-animation 1s steps(5, start) infinite;
         color: #ffcc00;
         text-shadow: 1px 1px #00ff00;
+        font-size: 1.2em;
       }
 
       /* Keyframes for blinking */
@@ -88,10 +91,29 @@
 
       /* Visitor counter */
       .visitor-counter {
-        margin-top: 20px;
-        font-size: 1.5em;
+        margin-top: 15px;
+        font-size: 1.2em; /* Adjusted size for mobile */
         color: #00ffff;
         text-shadow: 1px 1px #ff00ff;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        body {
+          font-size: 1.2em; /* Adjust base font size for smaller screens */
+        }
+
+        h1 {
+          font-size: 2.5em; /* Smaller headline font for mobile */
+        }
+
+        .visitor-counter {
+          font-size: 1em;
+        }
+
+        ol li a {
+          font-size: 1.1em; /* Adjust link font size */
+        }
       }
     </style>
   </head>
