@@ -2,13 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 body{
-    background-color: black;
-    color: white;
+    color: black;
+    background-image: url(https://dd.dexscreener.com/ds-data/tokens/solana/BLMkJypBw2H121ZF6pYNX637P5f75h1Pe4oV3vFupump/header.png?size=xl&key=78a697);
 }
 h1{
     text-align: center;
-    font-size: 100px;
+    font-size: 10rem;
     margin-top: 50px;
+}
+p {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 5rem;
+    text-align: center;
 }
