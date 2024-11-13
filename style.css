@@ -14,7 +14,7 @@ body {
     background-image: url(https://dd.dexscreener.com/ds-data/tokens/solana/BLMkJypBw2H121ZF6pYNX637P5f75h1Pe4oV3vFupump/header.png?size=xl&key=78a697);
     font-family: 'Lato', sans-serif;
     animation: fadeIn 1s ease-in-out;
-    margin-top: 80px; /* Adjust space for the fixed header */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header styles */
@@ -22,16 +22,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px; /* Adjusted padding for better mobile space */
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Added shadow for better contrast */
 }
 
 header .logo h1 {
-    font-size: 2rem; /* Adjust size for mobile */
+    font-size: 1.8rem; /* Adjusted for mobile */
     color: white;
     text-align: center;
     margin: 0;
@@ -40,15 +41,14 @@ header .logo h1 {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.3rem; /* Adjust size for mobile */
+    font-size: 1rem;
     transition: color 0.3s ease;
-    padding: 0 20px;
 }
 
 nav ul li a:hover {
@@ -59,10 +59,11 @@ nav ul li a:hover {
 main {
     padding: 20px;
     text-align: center;
+    margin-top: 100px; /* Ensure space for fixed header */
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 4rem;
     margin-top: 50px;
     font-family: 'Bangers', sans-serif;
     animation: bounce 1s ease infinite;
@@ -72,17 +73,17 @@ p {
     text-align: center;
     font-weight: bold;
     margin-top: 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     opacity: 0;
     animation: fadeIn 1s ease-in-out 1s forwards;
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 a {
     display: block;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     margin-top: 30px;
     opacity: 0;
@@ -101,7 +102,7 @@ footer {
 
 footer p {
     color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .social-links {
@@ -139,54 +140,5 @@ footer p {
     }
     60% {
         transform: translateY(-15px);
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    header .logo h1 {
-        font-size: 1.8rem; /* Adjust for smaller screens */
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li a {
-        font-size: 1.2rem;
-    }
-    h1 {
-        font-size: 4rem; /* Slightly smaller header on mobile */
-        margin-top: 30px;
-    }
-    p {
-        font-size: 1.2rem;
-    }
-    a {
-        font-size: 3rem;
-        margin-top: 15px;
-    }
-    .social-icon {
-        font-size: 1.5rem;
-    }
-}
-
-/* Further adjustment for very small screens */
-@media (max-width: 480px) {
-    header .logo h1 {
-        font-size: 1.5rem; /* Make logo text smaller */
-    }
-    h1 {
-        font-size: 3rem;
-        margin-top: 15px;
-    }
-    p {
-        font-size: 1rem;
-        margin-top: 10px;
-    }
-    a {
-        font-size: 1.5rem;
-    }
-    .social-icon {
-        font-size: 1.2rem;
     }
 }
