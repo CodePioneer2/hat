@@ -48,6 +48,7 @@ nav ul li a {
     color: white;
     font-size: 1.3rem; /* Adjust size for mobile */
     transition: color 0.3s ease;
+    padding: 0 20px;
 }
 
 nav ul li a:hover {
