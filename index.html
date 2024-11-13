@@ -10,9 +10,9 @@
       body {
         background-color: #111; /* Dark background */
         color: #00ff00; /* Neon green text */
-        font-family: "Courier New", Courier, monospace; /* Retro font */
+        font-family: 'Courier New', Courier, monospace; /* Retro font */
         text-align: center;
-        font-size: 1.2em;
+        font-size: 2em;
       }
 
       /* Headline */
@@ -86,10 +86,22 @@
       img {
         animation: slideIn 1s ease-out;
       }
+
+      /* Visitor counter */
+      .visitor-counter {
+        margin-top: 20px;
+        font-size: 1.5em;
+        color: #00ffff;
+        text-shadow: 1px 1px #ff00ff;
+      }
     </style>
   </head>
   <body>
     <h1>Mythical Hat</h1>
+    <div class="visitor-counter">
+      Visitor Count:
+      <span id="visitor-count"></span>
+    </div>
     <ol>
       <li>
         <a
@@ -108,8 +120,32 @@
       <li><a href="https://t.me/Peanuts_Hat">Join</a> $HAT community</li>
       <li class="blink">Make Memes Great Again</li>
     </ol>
-    <a href="https://x.com/elonmusk"><img src="./elon-musk.webp" alt="Elon Musk with peanut's hat" /></a>
-    <img src="./cowboy-hat.png" alt="Cowboy Hat" />
-    <img src="./Haliey-Welch.webp" alt="Retro Header" />
+    <a href="https://x.com/elonmusk"
+      ><img src="./elon-musk.webp" alt="Elon Musk with peanut's hat"
+    /></a>
+    <img src="./cowboy-hat.png" alt="Peanut's Hat" />
+    <img src="./Haliey-Welch.webp" alt="Haliey Welch with peanut's hat" />
+
+    <!-- Visitor Counter -->
+
+    <script>
+      // Generate a starting visitor count between 10,000 and 50,000
+      let visitorCount = Math.floor(Math.random() * 40000) + 10000;
+      const visitorCountElement = document.getElementById('visitor-count');
+      visitorCountElement.innerText = visitorCount;
+
+      // Function to randomly increment the visitor count
+      function incrementVisitorCount() {
+        // Randomly increment by 1 to 5
+        visitorCount += Math.floor(Math.random() * 5) + 1;
+        visitorCountElement.innerText = visitorCount;
+      }
+
+      // Set an interval to update the visitor count every 2-5 seconds
+      setInterval(
+        incrementVisitorCount,
+        Math.floor(Math.random() * 3000) + 2000
+      );
+    </script>
   </body>
 </html>
