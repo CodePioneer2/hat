@@ -3,17 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>the HAT</title>
+    <title>The HAT - $HAT Memes</title>
     <link rel="shortcut icon" href="cowboy-hat.png" type="image/x-icon" />
     <style>
+      /* Background */
+      body {
+        background-color: #111; /* Dark background */
+        color: #00ff00; /* Neon green text */
+        font-family: "Courier New", Courier, monospace; /* Retro font */
+        text-align: center;
+        font-size: 1.2em;
+      }
+
+      /* Headline */
       h1 {
-        text-align: center;
+        color: #ff00ff;
+        font-size: 2.5em;
+        text-shadow: 2px 2px #00ff00;
+        margin-bottom: 20px;
       }
-      ol{
-        text-align: center;
+
+      /* Ordered list with glowing links */
+      ol {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px auto;
+        max-width: 500px;
       }
+
+      ol li {
+        margin: 10px 0;
+      }
+
+      ol li a {
+        color: #ffcc00;
+        text-decoration: none;
+        font-weight: bold;
+        text-shadow: 1px 1px #ff00ff;
+        transition: color 0.2s ease;
+      }
+
+      ol li a:hover {
+        color: #00ffff;
+        text-shadow: 2px 2px #ff00ff;
+      }
+
+      /* Retro-style images */
       img {
+        margin: 15px auto;
         border-radius: 10px;
+        border: 2px solid #ffcc00;
+        width: 80%;
+        max-width: 400px;
+      }
+
+      /* Blinking animation for the slogan */
+      .blink {
+        animation: blink-animation 1s steps(5, start) infinite;
+        color: #ffcc00;
+        text-shadow: 1px 1px #00ff00;
+      }
+
+      /* Keyframes for blinking */
+      @keyframes blink-animation {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      /* Optional: retro animation */
+      @keyframes slideIn {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      ol li,
+      h1,
+      img {
+        animation: slideIn 1s ease-out;
       }
     </style>
   </head>
@@ -35,10 +106,10 @@
         about $HAT
       </li>
       <li><a href="https://t.me/Peanuts_Hat">Join</a> $HAT community</li>
-      <li>Make Memes Great Again</li>
+      <li class="blink">Make Memes Great Again</li>
     </ol>
     <img src="./elon-musk.webp" alt="Elon Musk with peanut's hat" />
-    <img src="./cowboy-hat.png" alt="" />
-    <img src="./header.webp" alt="" />
+    <img src="./cowboy-hat.png" alt="Cowboy Hat" />
+    <img src="./header.webp" alt="Retro Header" />
   </body>
 </html>
